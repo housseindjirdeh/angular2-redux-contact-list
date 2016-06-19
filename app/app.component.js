@@ -15,20 +15,22 @@ var Item = (function () {
     return Item;
 }());
 exports.Item = Item;
+var ITEMS = [
+    { id: 11, name: 'Eggs' },
+    { id: 12, name: 'Hot Dogs' },
+    { id: 13, name: 'Chicken' }
+];
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'Shopping Cart';
-        this.subTitle = 'Simple shopping cart example with Angular 2 and Redux';
-        this.item = {
-            id: 1,
-            name: "Eggs"
-        };
+        this.title = 'Grocery List';
+        this.subTitle = 'Simple grocery list application built with Angular 2 and Redux';
+        this.items = ITEMS;
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>{{title}}</h1><h2>{{subTitle}}</h2><h3>{{item.name}}</h3>',
-            template: "\n\t  <h1>{{title}}</h1>\n\t  <h2>{{subTitle}}</h2>\n\t  <div><label>id: </label>{{item.id}}</div>\n\t  <div><label>name: </label>{{item.name}}</div>\n\t  "
+            template: "\n    <h1>{{title}}</h1>\n    <h2>{{subTitle}}</h2>\n    <ul class=\"items\">\n      <li *ngFor=\"let item of items\"\n        [class.selected]=\"item === selecteditem\"\n        (click)=\"onSelect(item)\">\n        {{item.name}}<span class=\"pencil\"></span>\n      </li>\n    </ul>\n  ",
+            styles: ["\n  "]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
