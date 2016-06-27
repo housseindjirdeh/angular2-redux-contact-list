@@ -1,5 +1,5 @@
 export class Contact {
-  text: String;
+  name: String;
 }
 
 export class ContactStore {
