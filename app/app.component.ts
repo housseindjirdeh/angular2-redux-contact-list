@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 export class Item {
   id: number;
   name: string;
+  price: number;
 }
 const ITEMS: Item[] = [
   { id: 11, name: 'Eggs', price: 4.99 },

@@ -16,9 +16,9 @@ var Item = (function () {
 }());
 exports.Item = Item;
 var ITEMS = [
-    { id: 11, name: 'Eggs' },
-    { id: 12, name: 'Hot Dogs' },
-    { id: 13, name: 'Chicken' }
+    { id: 11, name: 'Eggs', price: 4.99 },
+    { id: 12, name: 'Hot Dogs', price: 2.95 },
+    { id: 13, name: 'Chicken', price: 1.96 }
 ];
 var CART = [];
 var AppComponent = (function () {
@@ -35,10 +35,15 @@ var AppComponent = (function () {
     AppComponent.prototype.onRemove = function (item) {
         this.cartItems.splice(this.cartItems.indexOf(item), 1);
     };
+    AppComponent.prototype.cartTotal = function (cartItems) {
+        return cartItems.reduce(function (itemFirst, itemSecond) {
+            return itemFirst + itemSecond.price;
+        }, 0);
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <h1>{{title}}</h1>\n    <h2>{{subTitle}}</h2>\n    <ul class=\"items\">\n      <li *ngFor=\"let item of items\" [class.selected]=\"item === selectedItem\">\n        {{item.name}}\n        <span class=\"pencil\" (click)=\"onSelect(item)\"> .. </span>\n      </li>\n    </ul>\n    <ul class=\"shopping-cart\">\n      <li *ngFor=\"let item of cartItems\">\n        {{item.name}}\n        <span class=\"pencil\" (click)=\"onRemove(item)\"> .. </span>\n      </li>\n    </ul>\n  ",
+            template: "\n    <h1>{{title}}</h1>\n    <h2>{{subTitle}}</h2>\n    <h3>Items</h3>\n    <ul class=\"items\">\n      <li *ngFor=\"let item of items\" [class.selected]=\"item === selectedItem\">\n        {{item.name}} | {{item.price | currency:'USD':true}}\n        <button (click)=\"onSelect(item)\">Add</button>\n      </li>\n    </ul>\n    <hr>\n    <h3>Cart</h3>\n    <ul class=\"shopping-cart\">\n      <li *ngFor=\"let item of cartItems\">\n        {{item.name}} | {{item.price | currency:'USD':true}}\n        <button (click)=\"onRemove(item)\">Remove</button>\n      </li>\n    </ul>\n    <hr>\n    {{cartTotal(cartItems) | currency:'USD':true}}\n  ",
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

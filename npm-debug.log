@@ -9,8 +9,8 @@
 6 silly lifecycle angular2-redux-shopping-cart@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle angular2-redux-shopping-cart@1.0.0~start: angular2-redux-shopping-cart@1.0.0
 8 verbose lifecycle angular2-redux-shopping-cart@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle angular2-redux-shopping-cart@1.0.0~start: PATH: /home/houssein/.nvm/versions/node/v6.2.1/lib/node_modules/npm/bin/node-gyp-bin:/home/houssein/Dev/angular2-redux-shopping-cart/node_modules/.bin:/home/houssein/.nvm/versions/node/v6.2.1/bin:/home/houssein/.nvm/versions/node/v6.2.1/bin:/home/houssein/.rbenv/plugins/ruby-build/bin:/home/houssein/.rbenv/shims:/home/houssein/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-10 verbose lifecycle angular2-redux-shopping-cart@1.0.0~start: CWD: /home/houssein/Dev/angular2-redux-shopping-cart
+9 verbose lifecycle angular2-redux-shopping-cart@1.0.0~start: PATH: /home/houssein/.nvm/versions/node/v6.2.1/lib/node_modules/npm/bin/node-gyp-bin:/home/houssein/Dev/angular/angular2-redux-shopping-cart/node_modules/.bin:/home/houssein/.nvm/versions/node/v6.2.1/bin:/home/houssein/.nvm/versions/node/v6.2.1/bin:/home/houssein/.rbenv/plugins/ruby-build/bin:/home/houssein/.rbenv/shims:/home/houssein/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+10 verbose lifecycle angular2-redux-shopping-cart@1.0.0~start: CWD: /home/houssein/Dev/angular/angular2-redux-shopping-cart
 11 silly lifecycle angular2-redux-shopping-cart@1.0.0~start: Args: [ '-c', 'tsc && concurrently "npm run tsc:w" "npm run lite" ' ]
 12 silly lifecycle angular2-redux-shopping-cart@1.0.0~start: Returned: code: 2  signal: null
 13 info lifecycle angular2-redux-shopping-cart@1.0.0~start: Failed to exec start script
@@ -25,7 +25,7 @@
 14 verbose stack     at maybeClose (internal/child_process.js:852:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
 15 verbose pkgid angular2-redux-shopping-cart@1.0.0
-16 verbose cwd /home/houssein/Dev/angular2-redux-shopping-cart
+16 verbose cwd /home/houssein/Dev/angular/angular2-redux-shopping-cart
 17 error Linux 3.19.0-25-generic
 18 error argv "/home/houssein/.nvm/versions/node/v6.2.1/bin/node" "/home/houssein/.nvm/versions/node/v6.2.1/bin/npm" "start"
 19 error node v6.2.1
