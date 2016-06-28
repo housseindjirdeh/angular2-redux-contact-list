@@ -17,14 +17,25 @@ var ContactList = (function () {
     ContactList.prototype.addContact = function (contact) {
         this.store.addContact(contact);
     };
+    ContactList.prototype.removeContact = function (contact) {
+        this.store.removeContact(contact);
+    };
+    ContactList.prototype.starContact = function (contact) {
+        this.store.starContact(contact);
+    };
+    ContactList.prototype.isFavourited = function (contact) {
+        var index = this.store.contacts.indexOf(contact);
+        return this.store.contacts[index].star === true;
+    };
     ContactList = __decorate([
         core_1.Component({
             selector: 'contact-list',
-            templateUrl: 'app/contact-list.html'
+            templateUrl: 'app/contact-list.html',
+            styleUrls: ['app/contact-list.css'],
         }), 
         __metadata('design:paramtypes', [contact_store_1.ContactStore])
     ], ContactList);
     return ContactList;
 }());
 exports.ContactList = ContactList;
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=contact-list.js.map

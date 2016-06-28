@@ -1,6 +1,7 @@
 "use strict";
 var Contact = (function () {
     function Contact() {
+        this.star = false;
     }
     return Contact;
 }());
@@ -13,6 +14,14 @@ var ContactStore = (function () {
         this.contacts.push({
             name: newContact
         });
+    };
+    ContactStore.prototype.removeContact = function (contact) {
+        var index = this.contacts.indexOf(contact);
+        this.contacts.splice(index, 1);
+    };
+    ContactStore.prototype.starContact = function (contact) {
+        var index = this.contacts.indexOf(contact);
+        this.contacts[index].star = !this.contacts[index].star;
     };
     return ContactStore;
 }());

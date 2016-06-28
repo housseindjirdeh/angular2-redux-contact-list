@@ -1,9 +1,25 @@
-<input #newContact placeholder="Name"
-      (keyup.enter)="addContact(newContact.value); newContact.value='' ">
-<button (click)=addContact(newContact.value)>Add</button>
-<ul>
-  <li *ngFor="let contact of store.contacts">
-    {{ contact.name }}
-    <button (click)=removeContact(contact)>Remove</button>
-  </li>
-</ul>
+<div id="container">
+	<header>
+		<div class="user">
+			<img src="http://hdjirdeh.github.io/public/me.jpg">
+		</div>
+		<div class="heading-user">
+			<strong>Houssein Djirdeh</strong>
+			<br/>
+			<small>@hdjirdeh</small>
+		</div>
+	</header>
+	<input #newContact class="add-contact" placeholder="Add Contact"
+	      (keyup.enter)="addContact(newContact.value); newContact.value='' ">
+	<ul class="contact-list">
+	  <li *ngFor="let contact of store.contacts">
+	  	<i class="fa fa-user fa-2x contact-icon"></i>
+	    <div class="contact-info">
+	    	<h3 class="heading--name">{{ contact.name }}</h3>
+	    	<div class="contact-item"><i class="fa fa-phone"></i> 647-XXX-XXXX</div>
+	    </div>
+	    <button class="contact-action" (click)="starContact(contact)"><i class="fa fa-2x" [class.fa-star]="isFavourited(contact)" [class.fa-star-o]="!isFavourited(contact)"></i></button>
+	    <button class="contact-action" (click)="removeContact(contact)"><i class="fa fa-trash fa-2x"></i></button>
+	  </li>
+	</ul>
+</div>
