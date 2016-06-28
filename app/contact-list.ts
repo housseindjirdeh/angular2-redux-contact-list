@@ -8,11 +8,7 @@ import { ContactStore } from './contact-store';
 })
 
 export class ContactList {
-  store: ContactStore;
-
-  constructor(store: ContactStore) {
-    this.store = store;
-  }
+  constructor(private store: ContactStore) { }
 
   addContact(contact) {
     this.store.addContact(contact);
@@ -26,7 +22,7 @@ export class ContactList {
     this.store.starContact(contact);
   }
 
-  isFavourited(contact: Contact) {
+  isFavourited(contact) {
     const index = this.store.contacts.indexOf(contact);
     return this.store.contacts[index].star === true;
   }

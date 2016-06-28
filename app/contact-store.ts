@@ -1,6 +1,6 @@
 export class Contact {
   name: String;
-  star: boolean = false; 
+  star: boolean;
 }
 
 export class ContactStore {
@@ -12,7 +12,8 @@ export class ContactStore {
 
   addContact(newContact: String) {
     this.contacts.push({
-      name: newContact
+      name: newContact,
+      star: false
     });
   }
 

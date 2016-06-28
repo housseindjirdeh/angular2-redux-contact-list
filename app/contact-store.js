@@ -1,7 +1,6 @@
 "use strict";
 var Contact = (function () {
     function Contact() {
-        this.star = false;
     }
     return Contact;
 }());
@@ -12,7 +11,8 @@ var ContactStore = (function () {
     }
     ContactStore.prototype.addContact = function (newContact) {
         this.contacts.push({
-            name: newContact
+            name: newContact,
+            star: false
         });
     };
     ContactStore.prototype.removeContact = function (contact) {
