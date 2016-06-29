@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { ContactStore } from './contact-store';
+import Contact from './contact';
 
 @Component({
   selector: 'contact-list',
   templateUrl: 'app/contact-list.html',
   styleUrls: ['app/contact-list.css'],
+  directives: [Contact]
 })
 
 export class ContactList {

@@ -10,30 +10,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var contact_store_1 = require('./contact-store');
-var contact_1 = require('./contact');
-var ContactList = (function () {
-    function ContactList(store) {
+var Contact = (function () {
+    function Contact(store) {
         this.store = store;
     }
-    ContactList.prototype.addContact = function (contact) {
-        this.store.addContact(contact);
-    };
-    ContactList.prototype.removeContact = function (contact) {
+    Contact.prototype.removeContact = function (contact) {
         this.store.removeContact(contact);
     };
-    ContactList.prototype.starContact = function (contact) {
+    Contact.prototype.starContact = function (contact) {
         this.store.starContact(contact);
     };
-    ContactList = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', contact_store_1.Contact)
+    ], Contact.prototype, "contact", void 0);
+    Contact = __decorate([
         core_1.Component({
-            selector: 'contact-list',
-            templateUrl: 'app/contact-list.html',
-            styleUrls: ['app/contact-list.css'],
-            directives: [contact_1.default]
+            selector: 'contact',
+            templateUrl: 'app/contact.html',
+            styleUrls: ['app/contact.css'],
         }), 
         __metadata('design:paramtypes', [contact_store_1.ContactStore])
-    ], ContactList);
-    return ContactList;
+    ], Contact);
+    return Contact;
 }());
-exports.ContactList = ContactList;
-//# sourceMappingURL=contact-list.js.map
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = Contact;
+//# sourceMappingURL=contact.js.map

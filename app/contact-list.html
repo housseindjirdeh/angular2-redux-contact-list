@@ -13,17 +13,7 @@
 	      (keyup.enter)="addContact(newContact.value); newContact.value='' ">
 	<ul class="contact-list">
 	  <li *ngFor="let contact of store.contacts">
-	  	<i class="fa fa-user fa-2x contact-icon"></i>
-	    <div class="contact-info">
-	    	<h3 class="heading--name">{{ contact.name }}</h3>
-	    	<div class="contact-item"><i class="fa fa-phone"></i> 647-XXX-XXXX</div>
-	    </div>
-	    <button class="contact-action" (click)="starContact(contact)">
-	    	<i class="fa fa-2x" [class.fa-star]="contact.star" [class.fa-star-o]="!contact.star"></i>
-	    </button>
-	    <button class="contact-action" (click)="removeContact(contact)">
-	    	<i class="fa fa-trash fa-2x"></i>
-	    </button>
+	  	<contact [contact]="contact"></contact>
 	  </li>
 	</ul>
 </div>
