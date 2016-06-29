@@ -29,6 +29,7 @@ var Contact = (function () {
             selector: 'contact',
             templateUrl: 'app/contact.html',
             styleUrls: ['app/contact.css'],
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush
         }), 
         __metadata('design:paramtypes', [contact_store_1.ContactStore])
     ], Contact);
