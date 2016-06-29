@@ -21,9 +21,4 @@ export class ContactList {
   starContact(contact) {
     this.store.starContact(contact);
   }
-
-  isFavourited(contact) {
-    const index = this.store.contacts.indexOf(contact);
-    return this.store.contacts[index].star === true;
-  }
 }
