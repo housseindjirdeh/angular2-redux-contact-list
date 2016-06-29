@@ -18,8 +18,12 @@
 	    	<h3 class="heading--name">{{ contact.name }}</h3>
 	    	<div class="contact-item"><i class="fa fa-phone"></i> 647-XXX-XXXX</div>
 	    </div>
-	    <button class="contact-action" (click)="starContact(contact)"><i class="fa fa-2x" [class.fa-star]="isFavourited(contact)" [class.fa-star-o]="!isFavourited(contact)"></i></button>
-	    <button class="contact-action" (click)="removeContact(contact)"><i class="fa fa-trash fa-2x"></i></button>
+	    <button class="contact-action" (click)="starContact(contact)">
+	    	<i class="fa fa-2x" [class.fa-star]="isFavourited(contact)" [class.fa-star-o]="!isFavourited(contact)"></i>
+	    </button>
+	    <button class="contact-action" (click)="removeContact(contact)">
+	    	<i class="fa fa-trash fa-2x"></i>
+	    </button>
 	  </li>
 	</ul>
 </div>
