@@ -23,10 +23,6 @@ var ContactList = (function () {
     ContactList.prototype.starContact = function (contact) {
         this.store.starContact(contact);
     };
-    ContactList.prototype.isFavourited = function (contact) {
-        var index = this.store.contacts.indexOf(contact);
-        return this.store.contacts[index].star === true;
-    };
     ContactList = __decorate([
         core_1.Component({
             selector: 'contact-list',
