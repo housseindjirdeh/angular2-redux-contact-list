@@ -1,5 +1,4 @@
 import Immutable = require('immutable');
-import { createStore } from 'redux';
 
 export class Contact {
   name: String;
