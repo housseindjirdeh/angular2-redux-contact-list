@@ -15,12 +15,4 @@ export class ContactList {
   addContact(contact) {
     this.store.addContact(contact);
   }
-
-  removeContact(contact) {
-    this.store.removeContact(contact);
-  }
-
-  starContact(contact) {
-    this.store.starContact(contact);
-  }
 }

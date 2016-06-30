@@ -18,12 +18,6 @@ var ContactList = (function () {
     ContactList.prototype.addContact = function (contact) {
         this.store.addContact(contact);
     };
-    ContactList.prototype.removeContact = function (contact) {
-        this.store.removeContact(contact);
-    };
-    ContactList.prototype.starContact = function (contact) {
-        this.store.starContact(contact);
-    };
     ContactList = __decorate([
         core_1.Component({
             selector: 'contact-list',

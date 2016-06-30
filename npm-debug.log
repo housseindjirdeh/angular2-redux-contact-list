@@ -1,7 +1,8 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/home/houssein/.nvm/versions/node/v6.2.1/bin/node',
 1 verbose cli   '/home/houssein/.nvm/versions/node/v6.2.1/bin/npm',
-1 verbose cli   'start' ]
+1 verbose cli   'start',
+1 verbose cli   'server' ]
 2 info using npm@3.9.3
 3 info using node@v6.2.1
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
@@ -11,10 +12,11 @@
 8 verbose lifecycle angular2-redux-shopping-cart@1.0.0~start: unsafe-perm in lifecycle true
 9 verbose lifecycle angular2-redux-shopping-cart@1.0.0~start: PATH: /home/houssein/.nvm/versions/node/v6.2.1/lib/node_modules/npm/bin/node-gyp-bin:/home/houssein/Dev/angular/angular2-redux-shopping-cart/node_modules/.bin:/home/houssein/.nvm/versions/node/v6.2.1/bin:/home/houssein/.nvm/versions/node/v6.2.1/bin:/home/houssein/.rbenv/plugins/ruby-build/bin:/home/houssein/.rbenv/shims:/home/houssein/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 10 verbose lifecycle angular2-redux-shopping-cart@1.0.0~start: CWD: /home/houssein/Dev/angular/angular2-redux-shopping-cart
-11 silly lifecycle angular2-redux-shopping-cart@1.0.0~start: Args: [ '-c', 'tsc && concurrently "npm run tsc:w" "npm run lite" ' ]
+11 silly lifecycle angular2-redux-shopping-cart@1.0.0~start: Args: [ '-c',
+11 silly lifecycle   'tsc && concurrently "npm run tsc:w" "npm run lite"  "server"' ]
 12 silly lifecycle angular2-redux-shopping-cart@1.0.0~start: Returned: code: 2  signal: null
 13 info lifecycle angular2-redux-shopping-cart@1.0.0~start: Failed to exec start script
-14 verbose stack Error: angular2-redux-shopping-cart@1.0.0 start: `tsc && concurrently "npm run tsc:w" "npm run lite" `
+14 verbose stack Error: angular2-redux-shopping-cart@1.0.0 start: `tsc && concurrently "npm run tsc:w" "npm run lite"  "server"`
 14 verbose stack Exit status 2
 14 verbose stack     at EventEmitter.<anonymous> (/home/houssein/.nvm/versions/node/v6.2.1/lib/node_modules/npm/lib/utils/lifecycle.js:245:16)
 14 verbose stack     at emitTwo (events.js:106:13)
@@ -27,18 +29,18 @@
 15 verbose pkgid angular2-redux-shopping-cart@1.0.0
 16 verbose cwd /home/houssein/Dev/angular/angular2-redux-shopping-cart
 17 error Linux 3.19.0-25-generic
-18 error argv "/home/houssein/.nvm/versions/node/v6.2.1/bin/node" "/home/houssein/.nvm/versions/node/v6.2.1/bin/npm" "start"
+18 error argv "/home/houssein/.nvm/versions/node/v6.2.1/bin/node" "/home/houssein/.nvm/versions/node/v6.2.1/bin/npm" "start" "server"
 19 error node v6.2.1
 20 error npm  v3.9.3
 21 error code ELIFECYCLE
-22 error angular2-redux-shopping-cart@1.0.0 start: `tsc && concurrently "npm run tsc:w" "npm run lite" `
+22 error angular2-redux-shopping-cart@1.0.0 start: `tsc && concurrently "npm run tsc:w" "npm run lite"  "server"`
 22 error Exit status 2
-23 error Failed at the angular2-redux-shopping-cart@1.0.0 start script 'tsc && concurrently "npm run tsc:w" "npm run lite" '.
+23 error Failed at the angular2-redux-shopping-cart@1.0.0 start script 'tsc && concurrently "npm run tsc:w" "npm run lite"  "server"'.
 23 error Make sure you have the latest version of node.js and npm installed.
 23 error If you do, this is most likely a problem with the angular2-redux-shopping-cart package,
 23 error not with npm itself.
 23 error Tell the author that this fails on your system:
-23 error     tsc && concurrently "npm run tsc:w" "npm run lite"
+23 error     tsc && concurrently "npm run tsc:w" "npm run lite"  "server"
 23 error You can get information on how to open an issue for this project with:
 23 error     npm bugs angular2-redux-shopping-cart
 23 error Or if that isn't available, you can get their info via:

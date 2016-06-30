@@ -1,17 +1,15 @@
+import Immutable = require('immutable');
+
 export class Contact {
   name: String;
   star: boolean;
 }
 
 export class ContactStore {
-  contacts: Contact[];
-
-  constructor() {
-    this.contacts = [];
-  }
+  contacts = Immutable.List(Contact);
 
   addContact(newContact: String) {
-    this.contacts.push({
+    this.contacts = this.contacts.push({
       name: newContact,
       star: false
     });
@@ -19,11 +17,16 @@ export class ContactStore {
 
   removeContact(contact: Contact) {
     const index = this.contacts.indexOf(contact);
-    this.contacts.splice(index, 1);
+    this.contacts = this.contacts.delete(index);
   }
 
   starContact(contact: Contact) {
     const index = this.contacts.indexOf(contact);
-    this.contacts[index].star = !this.contacts[index].star;
+    this.contacts = this.contacts.update(index, function(contact) {
+      return {
+        name: contact.name,
+        star: !contact.star
+      };
+    });
   }
 }
