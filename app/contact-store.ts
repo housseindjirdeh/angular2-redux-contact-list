@@ -1,4 +1,5 @@
 import Immutable = require('immutable');
+import { createStore } from 'redux';
 
 export class Contact {
   name: String;
@@ -6,7 +7,11 @@ export class Contact {
 }
 
 export class ContactStore {
-  contacts = Immutable.List(Contact);
+  contacts = Immutable.List<Contact>();
+
+  constructor() {
+    this.contacts = Immutable.List<Contact>();
+  }
 
   addContact(newContact: String) {
     this.contacts = this.contacts.push({
