@@ -11,12 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var contact_store_1 = require('./contact-store');
 var contact_1 = require('./contact');
+var actions_1 = require('./actions');
 var ContactList = (function () {
     function ContactList(store) {
         this.store = store;
+        this.contactID = 0;
     }
     ContactList.prototype.addContact = function (contact) {
-        this.store.addContact(contact);
+        this.store.dispatch(actions_1.addContact(contact, this.contactID++));
     };
     ContactList = __decorate([
         core_1.Component({

@@ -1,5 +1,7 @@
 "use strict";
 var Immutable = require('immutable');
+var redux_1 = require('redux');
+var reducer_1 = require('./reducer');
 var Contact = (function () {
     function Contact() {
     }
@@ -8,27 +10,17 @@ var Contact = (function () {
 exports.Contact = Contact;
 var ContactStore = (function () {
     function ContactStore() {
-        this.contacts = Immutable.List();
-        this.contacts = Immutable.List();
+        this.store = redux_1.createStore(reducer_1.reducer, Immutable.List());
     }
-    ContactStore.prototype.addContact = function (newContact) {
-        this.contacts = this.contacts.push({
-            name: newContact,
-            star: false
-        });
-    };
-    ContactStore.prototype.removeContact = function (contact) {
-        var index = this.contacts.indexOf(contact);
-        this.contacts = this.contacts.delete(index);
-    };
-    ContactStore.prototype.starContact = function (contact) {
-        var index = this.contacts.indexOf(contact);
-        this.contacts = this.contacts.update(index, function (contact) {
-            return {
-                name: contact.name,
-                star: !contact.star
-            };
-        });
+    Object.defineProperty(ContactStore.prototype, "contacts", {
+        get: function () {
+            return this.store.getState();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ContactStore.prototype.dispatch = function (action) {
+        this.store.dispatch(action);
     };
     return ContactStore;
 }());
