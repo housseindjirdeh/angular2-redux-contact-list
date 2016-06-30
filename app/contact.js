@@ -22,7 +22,7 @@ var Contact = (function () {
     };
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', contact_store_1.Contact)
+        __metadata('design:type', (typeof (_a = typeof contact_store_1.Contact !== 'undefined' && contact_store_1.Contact) === 'function' && _a) || Object)
     ], Contact.prototype, "contact", void 0);
     Contact = __decorate([
         core_1.Component({
@@ -34,6 +34,7 @@ var Contact = (function () {
         __metadata('design:paramtypes', [contact_store_1.ContactStore])
     ], Contact);
     return Contact;
+    var _a;
 }());
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = Contact;

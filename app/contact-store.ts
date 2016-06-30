@@ -22,7 +22,7 @@ export class ContactStore {
 
   starContact(contact: Contact) {
     const index = this.contacts.indexOf(contact);
-    this.contacts = this.contacts.update(index, function(contact) {
+    this.contacts = (<any>this.contacts).update(index, (contact) => {
       return {
         name: contact.name,
         star: !contact.star

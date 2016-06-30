@@ -1,11 +1,17 @@
 "use strict";
 var Immutable = require('immutable');
-var Contact = (function () {
-    function Contact() {
+var contact = (function () {
+    function contact() {
     }
-    return Contact;
+    return contact;
 }());
-exports.Contact = Contact;
+exports.contact = contact;
+{
+    name: String;
+    star: boolean;
+}
+as;
+Contact;
 var ContactStore = (function () {
     function ContactStore() {
         this.contacts = Immutable.List(Contact);
