@@ -9,7 +9,6 @@ exports.Contact = Contact;
 var ContactStore = (function () {
     function ContactStore() {
         this.contacts = Immutable.List();
-        this.contacts = Immutable.List();
     }
     ContactStore.prototype.addContact = function (newContact) {
         this.contacts = this.contacts.push({
