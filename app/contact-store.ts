@@ -1,6 +1,7 @@
 import Immutable = require('immutable');
 import { createStore } from 'redux';
-import { reducer, IContactAction } from './reducer';
+import { IContactAction } from './actions';
+import { reducer } from './reducer';
 
 export class Contact {
   id: number;

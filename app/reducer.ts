@@ -1,12 +1,6 @@
 import Immutable = require('immutable');
+import { IContactAction } from './actions';
 import { Contact as ContactModel} from './contact-store';
-
-export interface IContactAction {
-  type: string;
-  id?: number;
-  name?: string;
-  star?: boolean;
-}
 
 export function reducer(state: Immutable.List<ContactModel> = Immutable.List<ContactModel>(), action: IContactAction) {
   switch (action.type) {
@@ -21,6 +15,7 @@ export function reducer(state: Immutable.List<ContactModel> = Immutable.List<Con
     case 'STAR':
       return (<any>state).update(findIndexById(), (contact) => {
         return {
+          id: contact.id,
           name: contact.name,
           star: !contact.star
         };

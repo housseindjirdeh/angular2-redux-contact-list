@@ -1,5 +1,10 @@
-import { IContactAction } from './reducer';
 import { Contact as ContactModel} from './contact-store';
+
+export interface IContactAction {
+  type: string;
+  id: number;
+  name?: string;
+}
 
 export function addContact(name: string, id: number): IContactAction {
   return {

@@ -14,6 +14,7 @@ function reducer(state, action) {
         case 'STAR':
             return state.update(findIndexById(), function (contact) {
                 return {
+                    id: contact.id,
                     name: contact.name,
                     star: !contact.star
                 };
