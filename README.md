@@ -2,6 +2,8 @@
 
 :clipboard: A simple contact list application built with Angular 2, Immutable.js and Redux.
 
+[Link to demo](https://embed.plnkr.co/ns1tfi/)
+
 <p align="center">
   <img src = "contact-list.gif" width = 800>
 </p>
