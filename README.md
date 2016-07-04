@@ -10,7 +10,7 @@
 
 ## The breakdown
 
-This is the source code for my [blog post](http://houssein.me/redux/immutablejs/angular2/2016/07/02/angular2-with-immutablejs-and-redux.html) where I explain how I build this application step by step:
+This is the source code for my [blog post](http://houssein.me/redux/immutablejs/angular2/2016/07/04/angular2-with-immutablejs-and-redux.html) where I explain how I build this application step by step:
 
  + The basic setup with a single component
  + Multiple components with properties
